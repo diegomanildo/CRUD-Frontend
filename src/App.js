@@ -13,7 +13,7 @@ function App() {
 
   return (
     <div className="App">
-      <div className="data">
+      <div className="Data">
         <label>Name: <input onChange={e => setName(e.target.value)} type="text"></input></label>
         <label>Last name: <input onChange={e => setLastName(e.target.value)} type="text"></input></label>
         <label>Gmail: <input onChange={e => setGmail(e.target.value)} type="email"></input></label>
