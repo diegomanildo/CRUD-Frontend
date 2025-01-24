@@ -1,14 +1,15 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import User from '../models/User';
 import './UserTable.css';
 
 function UserTable() {
   const navigate = useNavigate();
 
   const [users, setUsers] = useState([
-    { id: 1, name: "Juan", lastName: "Porcel", email: "juanporcel@gmail.com" },
-    { id: 2, name: "Rodrigo", lastName: "Hernandez", email: "rodrigo32@gmail.com" },
-    { id: 3, name: "Pedro", lastName: "Gomez", email: "pgomez@hotmail.com" },
+    new User("Juan", "Porcel", "juanporcel@gmail.com"),
+    new User("Rodrigo", "Hernandez", "rodrigo32@gmail.com"),
+    new User("Pedro", "Gomez", "pgomez@hotmail.com"),
   ]);
 
   const deleteUser = (userId) => {
