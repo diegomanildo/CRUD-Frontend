@@ -98,7 +98,7 @@ function Register() {
           {errors.password && <p className="error">{errors.password}</p>}
         </label>
         <button onClick={showData}>Register</button>
-        <button className="action back" onClick={() => navigate("/")}>
+        <button style={{marginTop: "10px"}} className="action back" onClick={() => navigate("/")}>
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
             <path strokeLinecap="round" strokeLinejoin="round" d="M9 15 3 9m0 0 6-6M3 9h12a6 6 0 0 1 0 12h-3" />
           </svg>
