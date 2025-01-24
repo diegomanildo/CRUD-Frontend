@@ -22,7 +22,7 @@ function UserTable() {
 
   return (
     <div className="UserTable">
-      <h1>User List</h1>
+      <h1>Users</h1>
       {users.length > 0 ? (
         <table>
           <thead>
