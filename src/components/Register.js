@@ -54,53 +54,56 @@ function Register() {
 
   return (
     <div className="Register">
-      <button className="action back" onClick={() => navigate("/")}>
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M9 15 3 9m0 0 6-6M3 9h12a6 6 0 0 1 0 12h-3" />
-        </svg>
-      </button>
       <h1>Register</h1>
-      <label>
-        Name:
-        <input
-          onChange={(e) => setName(e.target.value)}
-          type="text"
-          value={name}
-          style={{ borderColor: errors.name ? "red" : "" }}
-        />
-        {errors.name && <p className="error">{errors.name}</p>}
-      </label>
-      <label>
-        Last name:
-        <input
-          onChange={(e) => setLastName(e.target.value)}
-          type="text"
-          value={lastName}
-          style={{ borderColor: errors.lastName ? "red" : "" }}
-        />
-        {errors.lastName && <p className="error">{errors.lastName}</p>}
-      </label>
-      <label>
-        Email:
-        <input
-          onChange={(e) => setMail(e.target.value)}
-          type="email"
-          value={mail}
-          style={{ borderColor: errors.mail ? "red" : "" }}
-        />
-        {errors.mail && <p className="error">{errors.mail}</p>}
-      </label>
-      <label>
-        Password:
-        <input
-          onChange={(e) => setPassword(e.target.value)}
-          type="password"
-          value={password}
-          style={{ borderColor: errors.password ? "red" : "" }}
-        />
-        {errors.password && <p className="error">{errors.password}</p>}
-      </label>
-      <button onClick={showData}>Register</button>
+      <form>
+
+        <label>
+          Name:
+          <input
+            onChange={(e) => setName(e.target.value)}
+            type="text"
+            value={name}
+            style={{ borderColor: errors.name ? "red" : "" }}
+          />
+          {errors.name && <p className="error">{errors.name}</p>}
+        </label>
+        <label>
+          Last name:
+          <input
+            onChange={(e) => setLastName(e.target.value)}
+            type="text"
+            value={lastName}
+            style={{ borderColor: errors.lastName ? "red" : "" }}
+          />
+          {errors.lastName && <p className="error">{errors.lastName}</p>}
+        </label>
+        <label>
+          Email:
+          <input
+            onChange={(e) => setMail(e.target.value)}
+            type="email"
+            value={mail}
+            style={{ borderColor: errors.mail ? "red" : "" }}
+          />
+          {errors.mail && <p className="error">{errors.mail}</p>}
+        </label>
+        <label>
+          Password:
+          <input
+            onChange={(e) => setPassword(e.target.value)}
+            type="password"
+            value={password}
+            style={{ borderColor: errors.password ? "red" : "" }}
+          />
+          {errors.password && <p className="error">{errors.password}</p>}
+        </label>
+        <button onClick={showData}>Register</button>
+        <button className="action back" onClick={() => navigate("/")}>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M9 15 3 9m0 0 6-6M3 9h12a6 6 0 0 1 0 12h-3" />
+          </svg>
+        </button>
+      </form>
     </div>
   );
 }
