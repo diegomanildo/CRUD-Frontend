@@ -45,7 +45,7 @@ function UserTable() {
           ))}
         </tbody>
       </table>
-      <button className="add-user" onClick={() => navigate('/register')}>+</button>
+      <button className="add-user" onClick={() => navigate("/register")}>+</button>
     </div>
   );
 }
