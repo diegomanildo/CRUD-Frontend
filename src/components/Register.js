@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Register.css'
 
 function Register() {
+  const navigate = useNavigate();
+
   const [name, setName] = useState("");
   const [lastName, setLastName] = useState("");
   const [mail, setMail] = useState("");
@@ -51,6 +54,11 @@ function Register() {
 
   return (
     <div className="Register">
+      <button className="action back" onClick={() => navigate("/")}>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M9 15 3 9m0 0 6-6M3 9h12a6 6 0 0 1 0 12h-3" />
+        </svg>
+      </button>
       <h1>Register</h1>
       <label>
         Name:
