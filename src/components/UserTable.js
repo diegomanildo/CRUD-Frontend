@@ -6,9 +6,9 @@ function UserTable() {
   const navigate = useNavigate();
 
   const [users, setUsers] = useState([
-    { id: 1, name: "Yazman Rodriguez", email: "yazmanito@gmail.com" },
-    { id: 2, name: "John Doe", email: "leo@gmail.com" },
-    { id: 3, name: "Haakon Dahlberg", email: "haakon@gmail.com" },
+    { id: 1, name: "Juan", lastName: "Porcel", email: "juanporcel@gmail.com" },
+    { id: 2, name: "Rodrigo", lastName: "Hernandez", email: "rodrigo32@gmail.com" },
+    { id: 3, name: "Pedro", lastName: "Gomez", email: "pgomez@hotmail.com" },
   ]);
 
   const deleteUser = (userId) => {
@@ -28,7 +28,8 @@ function UserTable() {
           <thead>
             <tr>
               <th>Id</th>
-              <th>Nombre</th>
+              <th>Name</th>
+              <th>LastName</th>
               <th>Email</th>
               <th>Actions</th>
             </tr>
@@ -38,6 +39,7 @@ function UserTable() {
               <tr key={user.id}>
                 <td>{user.id}</td>
                 <td>{user.name}</td>
+                <td>{user.lastName}</td>
                 <td>{user.email}</td>
                 <td>
                   <button className="action edit">
